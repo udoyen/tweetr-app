@@ -39,6 +39,7 @@
 </template>
 
 <script>
+  /* eslint-disable */
   import Notification from '@/components/Notification'
   import UserSettingsMenu from '@/components/User/Settings/UserSettingsMenu'
 

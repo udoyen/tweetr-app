@@ -24,10 +24,10 @@
 </template>
 
 <script>
-  import UserProfileHeader from '@/components/User/Profile/UserProfileHeader';
-  import UserCard from '@/components/User/Profile/UserCard';
-  import UserProfileSidebarDetails from '@/components/User/Profile/UserProfileSidebarDetails';
-  import profileMixin from '@/mixins/profileMixin';
+  import UserProfileHeader from '@/components/User/Profile/UserProfileHeader'
+  import UserCard from '@/components/User/Profile/UserCard'
+  import UserProfileSidebarDetails from '@/components/User/Profile/UserProfileSidebarDetails'
+  import profileMixin from '@/mixins/profileMixin'
 
   export default {
     name: 'UsersFollowing',

@@ -24,6 +24,7 @@
   import UserSidebar from '@/components/User/UserSidebar'
   import Tweets from '@/components/Tweet/Tweets'
   import WhoToFollow from '@/components/User/WhoToFollow'
+  import axios from 'axios'
 
   export default {
     name: 'Home',

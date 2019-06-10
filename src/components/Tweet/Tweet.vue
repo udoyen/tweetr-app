@@ -34,7 +34,7 @@
 
 <script>
   import TweetReactions from '@/components/Tweet/TweetReactions'
-
+  import axios from 'axios'
   export default {
     name: 'Tweet',
     components: {

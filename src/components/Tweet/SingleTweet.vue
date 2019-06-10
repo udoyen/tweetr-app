@@ -44,9 +44,10 @@
 </template>
 
 <script>
+  /* eslint-disable */
   import Replies from '@/components/Tweet/Replies'
   import TweetReactions from '@/components/Tweet/TweetReactions'
-
+  import axios from 'axios'
   export default {
     name: 'SingleTweet',
     components: {

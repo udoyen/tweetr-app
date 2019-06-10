@@ -40,6 +40,7 @@
 
 <script>
 import Notification from '@/components/Notification'
+import axios from 'axios'
 
 export default {
   name: 'LogInForm',
@@ -66,7 +67,7 @@ export default {
       axios
         .post('/login', {
           email: this.email,
-          password: this.password,
+          password: this.password
         })
         .then(response => {
           // save token in localstorage

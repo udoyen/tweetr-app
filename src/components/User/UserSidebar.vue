@@ -23,53 +23,55 @@
 </template>
 
 <script>
-  import EventBus from '@/eventBus'
+/* eslint-disable */
+import EventBus from '@/eventBus'
+import axios from 'axios'
 
-  export default {
-    name: 'UserSidebar',
-    props: {
-      user: {
-        type: Object,
-        required: true
-      }
-    },
-    data () {
-      return {
-        tweet: ''
-      }
-    },
-    computed: {
-      isFormValid () {
-        return !!this.tweet
-      }
-    },
-    methods: {
-      postTweet () {
-        const token = localStorage.getItem('tweetr-token')
+export default {
+  name: 'UserSidebar',
+  props: {
+    user: {
+      type: Object,
+      required: true
+    }
+  },
+  data () {
+    return {
+      tweet: ''
+    }
+  },
+  computed: {
+    isFormValid () {
+      return !!this.tweet
+    }
+  },
+  methods: {
+    postTweet () {
+      const token = localStorage.getItem('tweetr-token')
 
-        axios
-          .post(
-            '/tweet',
-            { tweet: this.tweet },
-            {
-              headers: {
-                Authorization: `Bearer ${token}`
-              }
+      axios
+        .post(
+          '/tweet',
+          { tweet: this.tweet },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`
             }
-          )
-          .then(response => {
-            // fire an event to the event bus
-            EventBus.$emit('tweetAdded', response.data.data)
+          }
+        )
+        .then(response => {
+          // fire an event to the event bus
+          EventBus.$emit('tweetAdded', response.data.data)
 
-            // clear input field
-            this.tweet = ''
-          })
-      },
-      logout () {
-        localStorage.removeItem('tweetr-token')
+          // clear input field
+          this.tweet = ''
+        })
+    },
+    logout () {
+      localStorage.removeItem('tweetr-token')
 
-        this.$router.push('/login')
-      }
+      this.$router.push('/login')
     }
   }
+}
 </script>

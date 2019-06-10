@@ -31,6 +31,7 @@
   import UserProfileSidebarDetails from '@/components/User/Profile/UserProfileSidebarDetails'
   import WhoToFollow from '@/components/User/WhoToFollow'
   import Tweets from '@/components/Tweet/Tweets'
+  import axios from 'axios'
 
   export default {
     name: 'UserProfile',

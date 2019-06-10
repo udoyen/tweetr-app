@@ -14,6 +14,8 @@
 </template>
 
 <script>
+/* eslint-disable */
+import axios from 'axios'
   export default {
     name: 'TweetReactions',
     props: {
@@ -69,7 +71,7 @@
             this.favorites.push(response.data.data)
           })
       },
-      unFavoriteTweet() {
+      unFavoriteTweet () {
         const token = localStorage.getItem('tweetr-token')
 
         if (!token) {
